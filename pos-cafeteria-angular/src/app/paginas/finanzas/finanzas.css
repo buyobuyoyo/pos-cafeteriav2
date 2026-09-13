@@ -120,3 +120,101 @@
 .barra-ventas {
   background: var(--verde-principal);
 }
+
+.movimientos-seccion {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.movimientos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.movimientos-header h3 {
+  margin: 0;
+}
+
+.movimientos-lista {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--gris-medio);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.movimiento-fila {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.9fr 1.4fr 4.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--gris-claro);
+}
+
+.movimiento-fila:last-child {
+  border-bottom: none;
+}
+
+.movimiento-encabezado {
+  font-weight: 700;
+  background: var(--gris-claro);
+}
+
+.movimiento-tipo {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.15rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.tipo-ingreso_venta {
+  background: var(--verde-principal);
+}
+
+.tipo-gasto_insumo {
+  background: #e5484d;
+}
+
+.tipo-gasto_personal {
+  background: #f2b705;
+  color: var(--texto-principal);
+}
+
+.movimiento-acciones {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.movimiento-accion {
+  border: none;
+  background: var(--gris-claro);
+  border-radius: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.movimiento-accion:hover {
+  background: var(--gris-medio);
+}
+
+@media (max-width: 700px) {
+  .movimiento-fila {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .movimiento-encabezado {
+    display: none;
+  }
+}

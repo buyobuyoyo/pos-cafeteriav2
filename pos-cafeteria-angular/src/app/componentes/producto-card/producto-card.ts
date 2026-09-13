@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-producto-card',
@@ -9,5 +9,9 @@ import { Component, input } from '@angular/core';
 export class ProductoCard {
   nombre = input.required<string>();
   etiqueta = input.required<string>();
-  imagen = input.required<string>();
+  imagen = input<string>('/imagenes/logo.png');
+  mostrarAcciones = input(false);
+
+  editar = output<void>();
+  eliminar = output<void>();
 }
