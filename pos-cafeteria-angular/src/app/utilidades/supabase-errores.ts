@@ -7,7 +7,7 @@ import { PostgrestError } from '@supabase/supabase-js';
 export function mensajeErrorDb(error: PostgrestError): string {
   switch (error.code) {
     case '23505': // unique_violation
-      return 'Ya existe un registro con ese nombre o código.';
+      return 'Ya existe un registro con ese nombre.';
     case '23503': // foreign_key_violation
       return 'No se puede eliminar: hay otros registros que dependen de este.';
     case '23502': // not_null_violation
