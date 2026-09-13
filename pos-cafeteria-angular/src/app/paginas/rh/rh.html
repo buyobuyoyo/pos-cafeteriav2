@@ -1,0 +1,16 @@
+<div class="rh-layout">
+  <section class="rh-datos">
+    <p>Número de empleados <strong>{{ numEmpleados }}</strong></p>
+    <p>Número total requerido de staff <strong>{{ staffRequerido }}</strong></p>
+    <p>Diferencia <strong>{{ diferencia }}</strong></p>
+    <p>
+      Estado
+      <strong class="estado" [class.understaffed]="estado === 'Understaffed'" [class.overstaffed]="estado === 'Overstaffed'">
+        {{ estado }}
+      </strong>
+    </p>
+    <p>Rendimiento <strong>{{ rendimiento }}%</strong></p>
+  </section>
+
+  <app-empleado-card [nombre]="empleado.nombre" [cargo]="empleado.cargo" [id]="empleado.id" [foto]="empleado.foto"></app-empleado-card>
+</div>

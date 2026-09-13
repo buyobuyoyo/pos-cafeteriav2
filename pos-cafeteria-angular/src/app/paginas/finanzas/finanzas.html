@@ -1,0 +1,38 @@
+<div class="finanzas-layout">
+  <section class="finanzas-izquierda">
+    <div class="finanzas-totales">
+      <p>Gastos en insumos (Totales): <strong>${{ totales.insumos }}</strong></p>
+      <p>Gastos en personal (Totales): <strong>${{ totales.personal }}</strong></p>
+      <p>Ventas (Totales): <strong>${{ totales.ventas }}</strong></p>
+    </div>
+
+    <div class="finanzas-scrollbox">
+      @for (dia of finanzasPorDia; track dia.fecha) {
+        <div class="finanzas-dia">
+          <p class="finanzas-fecha">Fecha: {{ dia.fecha }}</p>
+          <p>Gastos en insumos: {{ dia.insumos }}</p>
+          <p>Gastos en personal: {{ dia.personal }}</p>
+          <p>Ventas: {{ dia.ventas }}</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="finanzas-derecha">
+    <h3>Gráficos</h3>
+    <div class="grafico-barras">
+      <div class="barra-grupo">
+        <div class="barra barra-insumos" [style.height.%]="(totales.insumos / maxTotal) * 100"></div>
+        <span>Insumos</span>
+      </div>
+      <div class="barra-grupo">
+        <div class="barra barra-personal" [style.height.%]="(totales.personal / maxTotal) * 100"></div>
+        <span>Personal</span>
+      </div>
+      <div class="barra-grupo">
+        <div class="barra barra-ventas" [style.height.%]="(totales.ventas / maxTotal) * 100"></div>
+        <span>Ventas</span>
+      </div>
+    </div>
+  </section>
+</div>

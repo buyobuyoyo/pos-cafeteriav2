@@ -1,0 +1,47 @@
+.inventario-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.buscador {
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--gris-medio);
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 500px;
+  transition: border-color 0.15s ease;
+}
+
+.buscador:focus-visible {
+  border-color: var(--verde-principal);
+}
+
+.categorias {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.categoria-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--gris-medio);
+  font-weight: 600;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.categoria-btn:hover {
+  background: var(--gris-oscuro);
+  color: white;
+}
+
+.productos-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

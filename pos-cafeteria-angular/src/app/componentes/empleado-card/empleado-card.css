@@ -1,0 +1,26 @@
+.empleado-card {
+  width: 220px;
+  max-width: 100%;
+  border: 1px solid var(--gris-medio);
+  border-radius: 8px;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.empleado-foto {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--gris-claro);
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.8rem;
+}
+
+.empleado-card p {
+  margin: 0.3rem 0;
+  text-align: left;
+  font-size: 0.9rem;
+}

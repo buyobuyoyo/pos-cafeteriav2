@@ -1,0 +1,32 @@
+.compras-layout {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.compras-catalogo {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .compras-layout {
+    flex-direction: column;
+  }
+}
+
+.grupo-insumos h3 {
+  margin: 0 0 0.6rem;
+}
+
+.productos-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border: 1px dashed var(--gris-medio);
+  border-radius: 6px;
+  padding: 1rem;
+}

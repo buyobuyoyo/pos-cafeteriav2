@@ -1,0 +1,35 @@
+<div class="compras-layout">
+  <div class="compras-catalogo">
+    <section class="grupo-insumos">
+      <h3>Comida</h3>
+      <div class="productos-grid">
+        @for (insumo of insumosComida; track insumo.id) {
+          <app-producto-card
+            [nombre]="insumo.nombre"
+            [imagen]="insumo.imagen"
+            [etiqueta]="'STOCK-' + insumo.cantidad + '  $' + insumo.precio.toFixed(2)">
+          </app-producto-card>
+        }
+      </div>
+    </section>
+
+    <section class="grupo-insumos">
+      <h3>Bebidas</h3>
+      <div class="productos-grid">
+        @for (insumo of insumosBebidas; track insumo.id) {
+          <app-producto-card
+            [nombre]="insumo.nombre"
+            [imagen]="insumo.imagen"
+            [etiqueta]="'STOCK-' + insumo.cantidad + '  $' + insumo.precio.toFixed(2)">
+          </app-producto-card>
+        }
+      </div>
+    </section>
+  </div>
+
+  <app-orden-compra
+    [items]="itemsOrden"
+    [total]="total"
+    textoBoton="PAGAR A PROVEEDOR">
+  </app-orden-compra>
+</div>

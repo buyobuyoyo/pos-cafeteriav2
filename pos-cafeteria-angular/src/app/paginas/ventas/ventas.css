@@ -1,0 +1,47 @@
+.ventas-layout {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.ventas-catalogo {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .ventas-layout {
+    flex-direction: column;
+  }
+}
+
+.categorias {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.categoria-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--gris-medio);
+  font-weight: 600;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.categoria-btn:hover {
+  background: var(--gris-oscuro);
+  color: white;
+}
+
+.productos-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

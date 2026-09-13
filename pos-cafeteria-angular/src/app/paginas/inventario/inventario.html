@@ -1,0 +1,19 @@
+<div class="inventario-layout">
+  <input type="text" class="buscador" placeholder="Artículo o Cód. Barras" aria-label="Buscar artículo o código de barras">
+
+  <div class="categorias">
+    @for (categoria of categorias; track categoria) {
+      <button type="button" class="categoria-btn">{{ categoria }}</button>
+    }
+  </div>
+
+  <div class="productos-grid">
+    @for (producto of productos; track producto.id) {
+      <app-producto-card
+        [nombre]="producto.nombre"
+        [imagen]="producto.imagen"
+        [etiqueta]="'$' + producto.precio.toFixed(2)">
+      </app-producto-card>
+    }
+  </div>
+</div>
